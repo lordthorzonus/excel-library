@@ -1,7 +1,7 @@
 Attribute VB_Name = "UDF_Module"
 'Function for reversing the content of a cell based on text and delimiter
 'Useful for cases like reversing name order eq. John Doe becomes Doe John
-Function REVERSE(text As String, delimiter As String) As String
+Public Function REVERSE(text As String, delimiter As String) As String
 Attribute REVERSE.VB_Description = "Function for reversing the content of a cell based on text and delimiter"
 Attribute REVERSE.VB_ProcData.VB_Invoke_Func = " \n7"
     
@@ -40,11 +40,13 @@ Public Function EXPLODE(text As String, delimiter As String, itemNumber As Integ
     End If
     
 End Function
+
 'Useful helper function to show contents of the cell as is when concatenating them
 'For example concatenating days "1.1.2014 - 1.2.2014" is possible
 Public Function ASDISPLAYED(ByVal cell As Range) As String
   ASDISPLAYED = cell.text
 End Function
+
 'Helper function for checking validity of email addresses
 Public Function ISVALIDEMAIL(email As String) As Boolean
     Dim result As String
@@ -67,6 +69,8 @@ Public Function ISVALIDEMAIL(email As String) As Boolean
     End If
         
 End Function
+
+'Returns the number of items in the list based on delimiter
 Public Function LISTLENGTH(text As String, delimiter As String) As Integer
 
     Dim result As Integer
@@ -77,6 +81,7 @@ Public Function LISTLENGTH(text As String, delimiter As String) As Integer
     LISTLENGTH = result
 
 End Function
+
 'Converts given rgb value to HEX color
 Public Function RGBTOHEX(red As Integer, green As Integer, blue As Integer, includeHash As Boolean) As String
     Dim hexRed As String
@@ -105,6 +110,7 @@ Public Function RGBTOHEX(red As Integer, green As Integer, blue As Integer, incl
         RGBTOHEX = "#" & hexRed & hexGreen & hexBlue
     End If
 End Function
+
 'Converts HEX color to RGB also accepts html colors with #
 Public Function HEXTORGB(hx As String) As String
     If InStr(hx, "#") > 0 Then
