@@ -9,7 +9,7 @@ User defined functions that are included:
 * __EXPLODE__ - Exploding function for excel. Returns the specified item of the exploded string. 0 based count
 `=EXPLODE(text, delimiter, itemNumber)`
 
-*__ISFONTCOLOR__ - Function for checking the font color of the cell
+* __ISFONTCOLOR__ - Function for checking the font color of the cell
 `=ISFONTCOLOR(red,green,blue)`
 
 * __ASDISPLAYED__ - Useful helper function to show contents of the cell as is. Can be used for example for concatenating dates
