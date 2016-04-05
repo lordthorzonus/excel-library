@@ -22,6 +22,18 @@ Attribute REVERSE.VB_ProcData.VB_Invoke_Func = " \n7"
     
 End Function
 
+'Function for checking the font color of the cell 
+Public Function ISFONTCOLOR(target As Range, red As Integer, green As Integer, Blue As Integer)
+Attribute ISFONTCOLOR.VB_Description = "Function for checking the font color of the cell. Argument order: targetCell, red, green, blue"
+Attribute ISFONTCOLOR.VB_ProcData.VB_Invoke_Func = " \n7"
+    If target.Font.color = RGB(red, green, Blue) Then
+        ISCOLOR = True
+    Else
+        ISCOLOR = False
+    End If
+End Function
+
+
 'Exploding function for excel. Returns the specified item of the exploded string. 0 based count.
 Public Function EXPLODE(text As String, delimiter As String, itemNumber As Integer) As String
     
