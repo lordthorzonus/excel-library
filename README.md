@@ -18,4 +18,4 @@ User defined functions that are included:
 * __RGBTOHEX__ - Converts given rgb value to HEX color
 `=RGBTOHEX(red, green, blue)`
 * __HEXTORGB__ - Converts HEX color to RGB also accepts html colors with #
-`=HEXTORGB(hex)`
+`=HEXTORGB(hex)` 
