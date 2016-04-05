@@ -27,9 +27,9 @@ Public Function ISFONTCOLOR(target As Range, red As Integer, green As Integer, B
 Attribute ISFONTCOLOR.VB_Description = "Function for checking the font color of the cell. Argument order: targetCell, red, green, blue"
 Attribute ISFONTCOLOR.VB_ProcData.VB_Invoke_Func = " \n7"
     If target.Font.color = RGB(red, green, Blue) Then
-        ISCOLOR = True
+        ISFONTCOLOR = True
     Else
-        ISCOLOR = False
+        ISFONTCOLOR = False
     End If
 End Function
 
